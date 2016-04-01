@@ -1,0 +1,770 @@
+#canvas {
+    position: fixed;
+    background-color: #ffffff;
+    width: 880px;
+    height: 495px;
+    top: 0;
+    left: 0;
+}
+#container {
+    position: absolute;
+    background-color: #808080;
+    width: 840px;
+    height: 252px;
+    top: 20px;
+    left: 20px;
+}
+#plotspace {
+    position: absolute;
+    background-color: #ffffff;
+    width: 840px;
+    height: 183px;
+    top: 292px;
+    left: 20px;
+}
+#dividingline{
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    background-color: #c6c6c6;
+    top: 0;
+    left: 50%;
+}
+#frametop{
+    position: absolute;
+    background-color: #ffffff;
+    width: 880px;
+    height: 22px;
+    top: 0;
+    left: 0;
+}
+#framebottom{
+    position: absolute;
+    background-color: #ffffff;
+    width: 880px;
+    height: 22px;
+    top: 270px;
+    left: 0;
+}
+#frameleft{
+    position: absolute;
+    background-color: #ffffff;
+    width: 22px;
+    height: 495px;
+    top: 0;
+    left: 0;
+}
+#frameright{
+    position: absolute;
+    background-color: #ffffff;
+    width: 22px;
+    height: 495px;
+    top: 0;
+    left: 858px;
+}
+
+.ball {
+    position: absolute;
+    border-radius: 50%;
+}
+#rdfradius {  }
+#body0 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body1 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body2 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body3 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body4 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body5 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body6 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body7 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body8 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body9 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body10 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body11 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body12 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body13 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body14 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body15 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body16 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body17 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body18 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body19 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body20 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body21 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body22 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body23 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body24 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body25 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body26 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body27 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body28 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body29 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body30 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body31 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body32 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body33 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body34 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body35 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body36 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body37 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body38 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body39 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body40 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body41 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body42 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body43 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body44 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body45 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body46 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body47 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body48 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body49 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body50 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body51 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body52 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body53 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body54 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body55 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body56 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body57 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body58 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body59 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body60 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body61 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body62 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body63 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body64 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body65 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body66 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body67 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body68 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body69 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body70 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body71 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body72 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body73 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body74 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body75 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body76 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body77 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body78 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body79 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body80 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body81 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body82 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body83 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body84 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body85 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body86 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body87 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body88 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body89 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body90 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body91 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body92 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body93 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body94 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body95 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body96 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body97 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body98 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
+#body99 {
+    background-color: #eeeeee;
+    width: 3%;
+    height: 10%;
+    top: -25px;
+    left: -25px;
+}
