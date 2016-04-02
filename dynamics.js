@@ -295,7 +295,24 @@ function countBodies (bodies) {
     return n;
 }
 
-function velDist(tdData,bodies) {
-    return tdData;
+function velDist(bodies) {
+    var histodum = [];
+    var dumx;
+    var dumy;
+    var dum;
+    histodum.splice(0,histodum.length);
+    for (var ibin = 0; ibin < nbin; ibin++) {
+        histodum.push(0);
+    }
+    for (var ibody = 0; ibody < bodies.length; ibody++) {
+        dumx = bodies[ibody].vx;
+        dumy = bodies[ibody].vy;
+        dum = Math.sqrt(dumx*dumx+dumy*dumy);
+        ibin = (dum - tempmin) * nbin / (tempmax - tempmin) + 0.5;
+        ibin = Math.round(dum)-1;
+        if (dum >= 0 && dum < nbin) {
+            histodum[ibin] += 1;
+        }
+    }
+    return histodum;
 }
-

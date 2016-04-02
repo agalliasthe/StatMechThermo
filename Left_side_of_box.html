@@ -124,30 +124,31 @@
 <script src="dynamics.js" type="text/javascript"></script>
 <script type = "text/javascript">
 
-    var temp = 3;
     var rmax = 2.0;
     var req = 4.5; // for now all bodies have same r_eq
     var epsilon = 2.0;
     var rcut = req * 2;
-    var bodies1 = [];
     var xmax = 50;
     var ymax = 15;
+    var temp = 3;
     var tempmin = 2;
     var tempmax = 8;
-    var nstep = 100000;
+    var nstep = 1000;
     var dt = 0.01;
     var periodicbc = 1;
-    var initialspace = 5; // make sure that not too close together given the req or rmax.
-    var iframe;
+    var initialspace = 5; // make sure not too close together given the req or rmax.
+    var ndata = 25;
+    var nframe = 50;
+    var bodies1 = [];
     var data1 = [];
     var data2 = [];
-    var ndata = 25;
 
-    xmax = xmax * 0.5;
-    x0 = -xmax + rmax;
-    y0 = -ymax + rmax;
-    r0 = rmax;
-    ibody = 0;
+    // initialize
+    xmax = xmax * 0.5; // reduce the size of the box to set it up
+    var x0 = -xmax + rmax;
+    var y0 = -ymax + rmax;
+    var r0 = rmax;
+    var ibody = 0;
     do {
         do {
             //r0 = Math.random() * (rmax - 0.5) + 0.5;
@@ -158,19 +159,21 @@
         y0 = -ymax + rmax;
         x0 += initialspace;//2 * rmax;
     } while (x0 < xmax - rmax);
-    for (istep = 0; istep < 1000; istep++) {
-        bodies1 = elasticStep(bodies1);
+    // equilibrate
+    for (var istep = 0; istep < nstep; istep++) {
+        bodies1 = ljStep(bodies1);
     }
-    // move to left side of box
-    for (i = 0; i < bodies1.length; i++){
+    // move bodies to the left side of box
+    for (var i = 0; i < bodies1.length; i++){
         bodies1[i].x -= xmax
     }
-    xmax = xmax * 2.0;
+    xmax = xmax * 2.0; // box returns to original size
 
     newStyle (bodies1);
 
+    // simulate
     setInterval (frame,1);
-    iframe = 0;
+    var iframe = nframe - 1;
     for (idata = 0; idata < ndata; idata++){
         data1.push([]);
         data1[idata].push(idata);
@@ -184,7 +187,7 @@
         bodies1 = ljStep(bodies1);
         //bodies1 = elasticStep(bodies1);
         newStyle (bodies1);
-        if (iframe === 50) {
+        if (iframe === nframe) {
             data1.push([]);
             data1[ndata].push(ndata);
             data1[ndata].push(countBodies(bodies1));
