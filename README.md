@@ -6,13 +6,13 @@ Explanation of general algorithm:
 
 3 Simulate
 
-3.1 Move each particle one step of length dt. Within the function "frame" in the html file, there are two lines: one for elastic collisions (still a little buggy), the other for Lennard-Jones interactions (does pretty well). Comment one of these.
+--3.1 Move each particle one step of length dt. Within the function "frame" in the html file, there are two lines: one for elastic collisions (still a little buggy), the other for Lennard-Jones interactions (does pretty well). Comment one of these.
 
-3.2 Call newStyle to update bodies to their new positions in the animation.
+--3.2 Call newStyle to update bodies to their new positions in the animation.
 
-3.3 Update plot data according to routine. When the quantity if tracked in time, the routine splices the earliest data point and renumbers all remaining data from zero.
+--3.3 Update plot data according to routine. When the quantity if tracked in time, the routine splices the earliest data point and renumbers all remaining data from zero.
 
-3.4 Use flot to update the plot in the animation.
+--3.4 Use flot to update the plot in the animation.
 
 
 The initial conditions and parameters of each of these are specific to the routine and are contained within a <script>JavaScript</script> section of the html file.
