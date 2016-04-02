@@ -1,18 +1,18 @@
 Explanation of general algorithm:
 
-(1) Initialize bodies -- position them equally throughout the box, give them random velocities pulled from a normal distribution at a given temperature in a random direction.
+1 Initialize bodies -- position them equally throughout the box, give them random velocities pulled from a normal distribution at a given temperature in a random direction.
 
-(2) Equilibrate -- take just a couple of steps before the animation starts to mix them up from the initial configuration.
+2 Equilibrate -- take just a couple of steps before the animation starts to mix them up from the initial configuration.
 
-(3) Simulate
+3 Simulate
 
-    (3.1) Move each particle one step of length dt. Within the function "frame" in the html file, there are two lines: one for elastic collisions, the other for Lennard-Jones interactions. Comment one of these.
+3.1 Move each particle one step of length dt. Within the function "frame" in the html file, there are two lines: one for elastic collisions (still a little buggy), the other for Lennard-Jones interactions (does pretty well). Comment one of these.
 
-    (3.2) Call newStyle to update bodies to their new positions in the animation.
+3.2 Call newStyle to update bodies to their new positions in the animation.
 
-    (3.3) Update plot data according to routine.
+3.3 Update plot data according to routine. When the quantity if tracked in time, the routine splices the earliest data point and renumbers all remaining data from zero.
 
-    (3.4) Use flot to update the plot in the animation.
+3.4 Use flot to update the plot in the animation.
 
 
 The initial conditions and parameters of each of these are specific to the routine and are contained within a <script>JavaScript</script> section of the html file.
@@ -53,22 +53,39 @@ Generally, the local variables within a function are labeled without numbers (i.
 List of variables:
 
 parameters:
+
 --rmax = Maximum radius of a body. If random radius is assigned, the radius can be anywhere from rmax/2 to rmax. Random radii can be assigned by uncommenting the r0 = Math.random() line in the initialization do-loops.
+
 --req = Lennard-Jones equilibrium radius. For now all bodies have same r_eq. Working on generalizing this.
+
 --epsilon = Lennard-Jones depth of potential well at req.
+
 --rcut = LJ forces include bodies that are within this distance. All other bodies are considered non-interacting. Shouldn't be more than half the length of the box.
+
 --xmax = length of the box in the x-dimension. The algorithm assumes the center of the box is (0,0), so the total length of the box is 2 * xmax.
+
 --ymax = length of the box in the y-dimension. The algorithm assumes the center of the box is (0,0), so the total height of the box is 2 * ymax.
+
 --temp = Temperature. Velocities are pulled from a normal distribution centered around this value.
+
 --tempmin/tempmax = Minimum and maximum values for the temperature. These have little impact on anything except for assigning the temperature. In actuality, velocities can go above or below these values. They just seemed to be appropriate limits to make the colors make sense.
+
 --dt = Timestep
+
 --periodicbc = Periodic boundary conditions are on if this is set to 1. They are off if it is set to 0. (This is not fully implemented yet... for now pbc are always on)
+
 --initialspace = Initial spacing for the bodies when they are put in the box. Make sure it is big enough. It will wig out if it is too small given the req or rmax.
+
 --ndata = number of time steps included in the data. In the plots that track a quantity in time, the flot plot splices the initial value to maintain a total length of ndata. In this histogram plots, the data vector is comprised of a sum of data from the last ndata time steps.
+
 --nframe = number of time steps between plot updates
 
+--nstep = number of time steps in a loop
+
 variables:
+
 --bodies1[] = vector containing the bodies. Each bodies is an object with keys describing the position, velocity, acceleration, mass, radius, and color.
+
 --data1[] = vector with ndata x 2 elements. data[0] has 0..ndata. data[1] has the actual data in it. Feed this to flot to plot the data in the graph.
 
 -------------------------------------
@@ -102,4 +119,5 @@ Play with units
 generalize to handle different r_eq for different bodies
 
 clones
+
 
